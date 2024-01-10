@@ -16,12 +16,14 @@ namespace Product.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+
             return View();
         }
         [HttpPost]
         public IActionResult Create(Category category)
         {
             Repository.AddCategory(category);
+
             return RedirectToAction("Index");
         }
 

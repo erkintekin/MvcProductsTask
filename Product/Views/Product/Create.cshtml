@@ -1,0 +1,31 @@
+@model Products
+
+
+<form action="/Product/Create" method="post">
+    <div class="mb-3">
+<label asp-for="Name">Ürün Adı</label>
+<input asp-for="Name" class="form-control">
+</div>
+    <div class="mb-3">
+<label asp-for="Name">Ürün Fiyatı</label>
+<input asp-for="Name" class="form-control">
+</div>
+
+
+<select asp-for="CategoryId" class="form-select">
+   
+    @if(ViewBag.CategoryList != null){
+        <option disabled="True">Seçiniz...</option>
+        foreach (var item in ViewBag.CategoryList)
+        {
+        <option value="@item.Id">@item.Name</option>
+        }}
+    else
+    {
+    <option disabled="true">Henüz bir kategori bulunmamaktadır...</option>
+    }
+    
+
+</select>
+<button type="submit" class="btn btn-primary">Kaydet</button>
+</input></form>

@@ -7,7 +7,7 @@ namespace Product.Models
 {
     public static class Repository
     {
-        public static List<Product> Products { get; set; } = new List<Product>();
+        public static List<Products> Products { get; set; } = new List<Products>();
         public static List<Category> Categories { get; set; } = new List<Category>();
 
         public static void AddCategory(Category category)
@@ -15,7 +15,7 @@ namespace Product.Models
 
             Categories.Add(category);
         }
-        public static void AddProduct(Product product)
+        public static void AddProduct(Products product)
         {
 
             Products.Add(product);
