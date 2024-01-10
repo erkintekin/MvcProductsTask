@@ -5,10 +5,21 @@ using System.Threading.Tasks;
 
 namespace Product.Models
 {
-    public class Repository
+    public static class Repository
     {
-        public List<Product> Products { get; set; } = new List<Product>();
-        public List<Category> Category { get; set; } = new List<Category>();
+        public static List<Product> Products { get; set; } = new List<Product>();
+        public static List<Category> Categories { get; set; } = new List<Category>();
+
+        public static void AddCategory(Category category)
+        {
+
+            Categories.Add(category);
+        }
+        public static void AddProduct(Product product)
+        {
+
+            Products.Add(product);
+        }
 
     }
 }
